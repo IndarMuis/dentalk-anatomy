@@ -8,6 +8,7 @@ abstract class Routes {
   static const LANDING_PAGE = _Paths.LANDING_PAGE;
   static const EKSTRAORAL = _Paths.EKSTRAORAL;
   static const INTRAORAL = _Paths.INTRAORAL;
+  static const SPLASH_SCREEN = _Paths.SPLASH_SCREEN;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const LANDING_PAGE = '/landing-page';
   static const EKSTRAORAL = '/ekstraoral';
   static const INTRAORAL = '/intraoral';
+  static const SPLASH_SCREEN = '/splash-screen';
 }
