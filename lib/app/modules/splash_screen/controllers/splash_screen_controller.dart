@@ -1,7 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SplashScreenController extends GetxController {
-  //TODO: Implement SplashScreenController
+  late AnimationController scaleController;
+  late Animation<double> scaleAnimation;
 
   final count = 0.obs;
   @override
