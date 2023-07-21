@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:dentalk_anatomy/app/modules/detail/bindings/detail_binding.dart';
+import 'package:dentalk_anatomy/app/modules/detail/views/detail_view.dart';
 import 'package:dentalk_anatomy/app/modules/ekstraoral/bindings/ekstraoral_binding.dart';
 import 'package:dentalk_anatomy/app/modules/ekstraoral/views/ekstraoral_view.dart';
 import 'package:dentalk_anatomy/app/modules/home/bindings/home_binding.dart';
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.SPLASH_SCREEN,
       page: () => SplashScreenView(),
       binding: SplashScreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL,
+      page: () => DetailView(),
+      binding: DetailBinding(),
     ),
   ];
 }
