@@ -35,7 +35,7 @@ class LandingPageView extends GetView<LandingPageController> {
       ),
       done: Row(
         children: [
-          Text('Swipe Right',
+          Text('Continue',
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
