@@ -22,58 +22,66 @@ class HomeView extends GetView<HomeController> {
           child: Column(
             children: [
               Container(
-                height: 100,
+                height: 80,
+                width: double.infinity,
+                padding: EdgeInsets.all(12),
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
-                    // borderRadius: BorderRadius.circular(20),
-                    color: Constant.lightnestColor,
-                    border: Border(
-                        bottom: BorderSide(width: 0.5, color: Colors.grey))),
+                  borderRadius: BorderRadius.circular(18),
+                  color: Constant.lightnestColor,
+                ),
                 child: TabBar(
-                    // labelStyle: primaryTextStyle.copyWith(
-                    //     fontWeight: semiBold, fontSize: 15),
-                    // labelColor: primaryColor,
-                    unselectedLabelColor: Colors.grey,
-                    // controller: tabController,
-                    // indicator: BoxDecoration(
-                    //     border: Border(
-                    //         bottom: BorderSide(
-                    //   width: 4,
-                    //   color: Colors.red,
-                    // ))),
+                    onTap: (value) {
+                      print("CURRENT VALUE : $value");
+                      controller.currentPage.value = value;
+                    },
+                    indicator: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      color: Constant.whiteColor,
+                      // border: Border.all(color: Colors.transparent),
+                    ),
                     indicatorColor: Colors.transparent,
                     indicatorWeight: 0.1,
                     tabs: [
-                      Tab(
-                        child: Container(
-                          padding: EdgeInsets.all(30),
-                          height: 90,
-                          decoration: BoxDecoration(color: Colors.white),
-                          child: Text(
-                            "Raidology",
-                            style: Constant.primaryTextStyle.copyWith(
-                              color: Constant.darknestColor,
+                      Obx(() => Tab(
+                            child: Text(
+                              "Radiology",
+                              style: Constant.primaryTextStyle.copyWith(
+                                fontSize: 18,
+                                color: controller.currentPage == 0
+                                    ? Constant.primaryTextColor
+                                    : Constant.whiteColor,
+                                fontWeight: Constant.semiBoldFontWeight,
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        color: Colors.red,
-                        child: Tab(
-                          text: "Disimpan",
-                        ),
-                      ),
+                          )),
+                      Obx(() => Tab(
+                            child: Text(
+                              "Anatomi",
+                              style: Constant.primaryTextStyle.copyWith(
+                                fontSize: 18,
+                                color: controller.currentPage == 1
+                                    ? Constant.primaryTextColor
+                                    : Constant.whiteColor,
+                                fontWeight: Constant.semiBoldFontWeight,
+                              ),
+                            ),
+                          )),
                     ]),
               ),
               Expanded(
-                  child: TabBarView(children: [
-                Container(
-                  child: Text("data 1"),
+                child: TabBarView(
+                  physics: NeverScrollableScrollPhysics(),
+                  children: [
+                    Container(
+                      child: Center(child: Text("RADIOLOGY")),
+                    ),
+                    Container(
+                      child: Center(child: Text("ANATOMI")),
+                    )
+                  ],
                 ),
-                Container(
-                  child: Text("data 1"),
-                )
-              ]))
+              )
             ],
           ),
         ),

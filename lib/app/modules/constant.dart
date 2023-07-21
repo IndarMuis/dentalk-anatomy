@@ -14,7 +14,10 @@ class Constant {
   static const Color darkColor = Color(0xff266162);
   static const Color darknestColor = Color(0xff173D3C);
 
-  static TextStyle primaryTextStyle = GoogleFonts.poppins();
+  static const Color primaryTextColor = Color(0xff504F51);
+
+  static TextStyle primaryTextStyle =
+      GoogleFonts.poppins(color: primaryTextColor);
 
   static const FontWeight boldFontWeight = FontWeight.w700;
   static const FontWeight semiBoldFontWeight = FontWeight.w600;
