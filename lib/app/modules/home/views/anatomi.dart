@@ -1,4 +1,4 @@
-import 'package:dentalk_anatomy/app/modules/constant.dart';
+import 'package:dentalk_anatomy/app/modules/shared/constant.dart';
 import 'package:dentalk_anatomy/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

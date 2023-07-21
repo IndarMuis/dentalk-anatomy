@@ -1,4 +1,4 @@
-import 'package:dentalk_anatomy/app/modules/constant.dart';
+import 'package:dentalk_anatomy/app/modules/shared/constant.dart';
 import 'package:dentalk_anatomy/app/modules/home/views/anatomi.dart';
 import 'package:dentalk_anatomy/app/modules/home/views/radiology.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +12,10 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Constant.backgroundColor,
+        backgroundColor: Constant.whiteColor,
         appBar: AppBar(
           toolbarHeight: 30,
-          backgroundColor: Constant.backgroundColor,
+          backgroundColor: Constant.whiteColor,
           elevation: 0,
         ),
         body: DefaultTabController(
@@ -59,7 +59,7 @@ class HomeView extends GetView<HomeController> {
                                   color: controller.currentPage == 0
                                       ? Constant.primaryTextColor
                                       : Constant.whiteColor,
-                                  fontWeight: Constant.mediumFontWeight,
+                                  fontWeight: Constant.semiBoldFontWeight,
                                 ),
                               ),
                             )),
@@ -71,7 +71,7 @@ class HomeView extends GetView<HomeController> {
                                   color: controller.currentPage == 1
                                       ? Constant.primaryTextColor
                                       : Constant.whiteColor,
-                                  fontWeight: Constant.mediumFontWeight,
+                                  fontWeight: Constant.semiBoldFontWeight,
                                 ),
                               ),
                             )),

@@ -1,4 +1,4 @@
-import 'package:dentalk_anatomy/app/modules/constant.dart';
+import 'package:dentalk_anatomy/app/modules/shared/constant.dart';
 import 'package:dentalk_anatomy/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
@@ -40,10 +40,10 @@ class LandingPageView extends GetView<LandingPageController> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text('Continue',
-              style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff379296))),
+              style: Constant.primaryTextStyle.copyWith(
+                fontWeight: Constant.mediumFontWeight,
+                fontSize: 22,
+              )),
           Container(
             margin: EdgeInsets.only(bottom: 10, right: 10, left: 10, top: 10),
             padding: EdgeInsets.all(7),
