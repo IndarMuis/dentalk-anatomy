@@ -42,11 +42,11 @@ class LandingPageView extends GetView<LandingPageController> {
           Text('Continue',
               style: Constant.primaryTextStyle.copyWith(
                 fontWeight: Constant.mediumFontWeight,
-                fontSize: 22,
+                fontSize: 20,
               )),
           Container(
-            margin: EdgeInsets.only(bottom: 10, right: 10, left: 10, top: 10),
-            padding: EdgeInsets.all(7),
+            margin: EdgeInsets.only(bottom: 10, right: 0, left: 10, top: 10),
+            padding: EdgeInsets.all(14),
             decoration: BoxDecoration(
               color: Color(0xff379296),
               borderRadius: BorderRadius.circular(50),
