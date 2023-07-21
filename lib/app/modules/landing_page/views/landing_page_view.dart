@@ -1,3 +1,4 @@
+import 'package:dentalk_anatomy/app/modules/constant.dart';
 import 'package:dentalk_anatomy/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
@@ -15,10 +16,12 @@ class LandingPageView extends GetView<LandingPageController> {
         PageViewModel(
           // title: 'Oral Radiology',
           titleWidget: Padding(
-            padding: EdgeInsets.only(top: Get.height / 5, bottom: 30),
-            child: Text('Oral Radiology', style: TextStyle(fontSize: 30)),
+            padding: EdgeInsets.only(top: Get.height / 6, bottom: 60),
+            child: Text('Oral Radiology',
+                style: Constant.primaryTextStyle.copyWith(fontSize: 32)),
           ),
-          bodyWidget: Image.asset('assets/landing_page_vector.png', width: 350),
+          bodyWidget: Center(
+              child: Image.asset('assets/landing_page_vector.png', width: 400)),
         )
       ],
       dotsFlex: 1,
@@ -34,15 +37,16 @@ class LandingPageView extends GetView<LandingPageController> {
         ),
       ),
       done: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text('Continue',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff379296))),
           Container(
-            margin: EdgeInsets.all(10),
-            padding: EdgeInsets.all(5),
+            margin: EdgeInsets.only(bottom: 10, right: 10, left: 10, top: 10),
+            padding: EdgeInsets.all(7),
             decoration: BoxDecoration(
               color: Color(0xff379296),
               borderRadius: BorderRadius.circular(50),
